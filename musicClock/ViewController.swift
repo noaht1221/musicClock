@@ -4,7 +4,7 @@
 //
 //  Created by Noah Thompson on 1/31/23.
 //
-
+import AVFoundation
 import UIKit
 
 class ViewController: UIViewController {
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     var timeLeft : Int?
     var estimatedTime : Int?
     var countdownTimer: Timer = Timer()
+    var audio: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,7 @@ class ViewController: UIViewController {
             remainingLabel.text = "Time Remaining: \(printSecondsConverter(Int(timeInput.countDownDuration)))"
         } else {
             
+            audio?.stop()
             startButton.setTitle("Start Timer", for: .normal)
         }
     }
@@ -89,9 +91,20 @@ class ViewController: UIViewController {
                timeLeft! -= 1
            } else {
                countdownTimer.invalidate()
-               
+               playAudio()
            }
        }
+    
+    func playAudio() {
+            if let tune = NSDataAsset(name:"ring"){
+                do {
+                    audio = try AVAudioPlayer(data:tune.data, fileTypeHint:"mp3")
+                    audio?.play()
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     
 }
 
