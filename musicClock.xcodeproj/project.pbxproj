@@ -13,9 +13,6 @@
 		600CE8FB2989F07700725BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600CE8F92989F07700725BAA /* Main.storyboard */; };
 		600CE8FD2989F07900725BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600CE8FC2989F07900725BAA /* Assets.xcassets */; };
 		600CE9002989F07900725BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600CE8FE2989F07900725BAA /* LaunchScreen.storyboard */; };
-		600CE90B2989F07A00725BAA /* musicClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600CE90A2989F07A00725BAA /* musicClockTests.swift */; };
-		600CE9152989F07A00725BAA /* musicClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600CE9142989F07A00725BAA /* musicClockUITests.swift */; };
-		600CE9172989F07A00725BAA /* musicClockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600CE9162989F07A00725BAA /* musicClockUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +42,7 @@
 		600CE8FF2989F07900725BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		600CE9012989F07900725BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600CE9062989F07A00725BAA /* musicClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		600CE90A2989F07A00725BAA /* musicClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicClockTests.swift; sourceTree = "<group>"; };
 		600CE9102989F07A00725BAA /* musicClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		600CE9142989F07A00725BAA /* musicClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicClockUITests.swift; sourceTree = "<group>"; };
-		600CE9162989F07A00725BAA /* musicClockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicClockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				600CE8F22989F07700725BAA /* musicClock */,
-				600CE9092989F07A00725BAA /* musicClockTests */,
-				600CE9132989F07A00725BAA /* musicClockUITests */,
 				600CE8F12989F07700725BAA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,23 +100,6 @@
 				600CE9012989F07900725BAA /* Info.plist */,
 			);
 			path = musicClock;
-			sourceTree = "<group>";
-		};
-		600CE9092989F07A00725BAA /* musicClockTests */ = {
-			isa = PBXGroup;
-			children = (
-				600CE90A2989F07A00725BAA /* musicClockTests.swift */,
-			);
-			path = musicClockTests;
-			sourceTree = "<group>";
-		};
-		600CE9132989F07A00725BAA /* musicClockUITests */ = {
-			isa = PBXGroup;
-			children = (
-				600CE9142989F07A00725BAA /* musicClockUITests.swift */,
-				600CE9162989F07A00725BAA /* musicClockUITestsLaunchTests.swift */,
-			);
-			path = musicClockUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600CE90B2989F07A00725BAA /* musicClockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600CE9152989F07A00725BAA /* musicClockUITests.swift in Sources */,
-				600CE9172989F07A00725BAA /* musicClockUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

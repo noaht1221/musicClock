@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="musicClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7G-mo-tqi" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E5u-J9-L3j">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btH-vo-DqD">
+                                        <rect key="frame" x="176" y="0.0" width="41.333333333333343" height="198.33333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-mj-ctS">
+                                        <rect key="frame" x="30" y="198.33333333333331" width="333" height="198.33333333333331"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jik-Gg-uYX">
+                                        <rect key="frame" x="159" y="396.66666666666669" width="75" height="198.00000000000006"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="startCountdown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDd-B2-rUd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGp-Uq-3T7">
+                                        <rect key="frame" x="176" y="594.66666666666663" width="41.333333333333343" height="198.33333333333337"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uLD-mj-ctS" secondAttribute="trailing" constant="30" id="QeO-n2-Dbe"/>
+                                    <constraint firstItem="uLD-mj-ctS" firstAttribute="leading" secondItem="E5u-J9-L3j" secondAttribute="leading" constant="30" id="zAB-1x-83k"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E5u-J9-L3j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1pL-k4-CRv"/>
+                            <constraint firstItem="B7G-mo-tqi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OWx-zv-gSF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E5u-J9-L3j" secondAttribute="trailing" id="PNN-ok-saq"/>
+                            <constraint firstAttribute="bottom" secondItem="B7G-mo-tqi" secondAttribute="bottom" id="QKI-aQ-uP1"/>
+                            <constraint firstItem="E5u-J9-L3j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ygi-vz-xjR"/>
+                            <constraint firstAttribute="bottom" secondItem="E5u-J9-L3j" secondAttribute="bottom" id="nxw-Jf-GOo"/>
+                            <constraint firstItem="B7G-mo-tqi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rUO-J0-cPD"/>
+                            <constraint firstItem="B7G-mo-tqi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="wNa-Hk-A7F"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="B7G-mo-tqi" id="pD9-69-Osx"/>
+                        <outlet property="dateLabel" destination="btH-vo-DqD" id="93w-P9-4CC"/>
+                        <outlet property="remainingLabel" destination="aGp-Uq-3T7" id="1Xf-H6-N65"/>
+                        <outlet property="startButton" destination="jik-Gg-uYX" id="Vda-jT-VXG"/>
+                        <outlet property="timeInput" destination="uLD-mj-ctS" id="SoB-6j-R8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="90.839694656488547" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
