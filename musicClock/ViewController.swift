@@ -47,10 +47,7 @@ class ViewController: UIViewController {
                getDateTime()
     }
     
-    func changeBackground (_ imageName : String) {
-        backgroundImage.image = UIImage(named: imageName)
-    }
-
+  
     private func getDateTime() {
             dateTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(self.dateTime) , userInfo: nil, repeats: true)
         }
@@ -64,9 +61,15 @@ class ViewController: UIViewController {
             format.string(from: Date()) == "AM" ? changeBackground("dayBg") :
                 changeBackground("nightBg")
         }
+    
+    func changeBackground (_ imageName : String) {
+        backgroundImage.image = UIImage(named: imageName)
+    }
+    
     func secondsConverter(_ seconds: Int) -> (Int, Int, Int) {
            return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
        }
+    
     func printSecondsConverter(_ seconds: Int) -> String {
             let (h, m, s) = secondsConverter(seconds)
             return String(format: "%02d:%02d:%02d",h,m,s)
