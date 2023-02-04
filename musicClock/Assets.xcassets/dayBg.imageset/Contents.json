@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "day.jpeg",
+      "filename" : "cartoonday.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "day@2x.jpeg",
+      "filename" : "cartoonday@2x.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "day@3x.jpeg",
+      "filename" : "cartoonday@3x.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
